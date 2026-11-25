@@ -46,6 +46,7 @@
       b.disabled = !usable;
       let mark = '';
       if (loaded && s >= first && s <= last) mark = booked.has(s) ? '満' : '○';
+      if (mark === '満') b.classList.add('full');
       if (s === start) { b.classList.add('edge'); mark = '着'; }
       else if (s === end) { b.classList.add('edge'); mark = '発'; }
       else if (end && s > start && s < end) b.classList.add('in');

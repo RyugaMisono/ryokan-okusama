@@ -4,15 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>離れ宿 こたつ庵｜一日一組の宿</title>
+<meta name="theme-color" content="#15202f">
+<title>旅館奥さん｜一日一組の宿</title>
+<link rel="icon" href="images/mon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Shippori+Mincho+B1:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="bar">
-  <a class="brand" href="#top">こたつ庵</a>
+  <a class="brand" href="#top" aria-label="旅館奥さん トップへ">
+    <svg class="mon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><circle cx="20" cy="20" r="15.5"/><text x="20" y="27" text-anchor="middle">奥</text></svg>
+    <span>旅館奥さん</span>
+  </a>
   <nav aria-label="主な項目">
     <a href="#room">客室</a><a href="#meal">お食事</a><a href="#bath">湯殿</a><a href="#plan">宿泊プラン</a><a href="#faq">よくある質問</a>
   </nav>
@@ -21,25 +26,35 @@
 
 <main id="top">
 <section class="hero">
-  <img data-photo="hero" alt="宿の外観">
+  <img data-photo="hero" alt="月夜に灯りのともる宿の外観">
   <div class="hero-copy">
-    <h1>離れ宿<br>こたつ庵</h1>
-    <p>何もしない贅沢を、一日一組。</p>
+    <p class="hero-sub">一日一組の宿</p>
+    <h1>旅館奥さん</h1>
+    <p class="hero-tag">何もしない贅沢を、今宵あなたに。</p>
   </div>
+  <p class="hero-en" aria-hidden="true">Ryokan Okusan</p>
+  <a class="scroll" href="#intro" aria-label="下へ">Scroll</a>
   <div class="shoji shoji-l" aria-hidden="true"></div>
   <div class="shoji shoji-r" aria-hidden="true"></div>
 </section>
 
-<section class="intro">
-  <h2>ようこそ、お帰りなさいませ</h2>
-  <p>当庵は、一日一組さまだけをお迎えする小さな宿でございます。<br>仲居はおりません。かわりに、気を遣わなくてよい時間がございます。<br>靴を脱いで、あとはどうぞご自由に。</p>
+<section class="intro" id="intro">
+  <p class="label"><span class="en">Welcome</span></p>
+  <div class="tate">
+    <h2>ようこそ、<br>お帰りなさいませ</h2>
+    <p>当館は、一日一組さまだけをお迎えする<br>小さな宿でございます。</p>
+    <p>仲居はおりません。<br>かわりに、気を遣わなくてよい時間がございます。</p>
+    <p>靴を脱いで、<br>あとはどうぞご自由に。</p>
+    <p class="sign">女将　奥さん</p>
+  </div>
 </section>
 
 <section class="feature" id="room">
-  <img data-photo="room" alt="客室">
+  <figure class="photo"><img data-photo="room" alt="こたつのある和室" loading="lazy"></figure>
   <div class="text">
+    <p class="label"><span class="no">壱</span><span class="en">Guest Room</span></p>
     <h2>客室「こたつの間」</h2>
-    <p>当庵ただ一つのお部屋です。冬はこたつ、夏は扇風機。一度入ると出られないとの声を多数頂戴しております。</p>
+    <p>当館ただ一つのお部屋です。冬はこたつ、夏は扇風機。一度入ると出られないとの声を多数頂戴しております。</p>
     <dl>
       <div><dt>定員</dt><dd>二名さままで</dd></div>
       <div><dt>寝具</dt><dd>お布団（敷くのはお客様）</dd></div>
@@ -49,8 +64,9 @@
 </section>
 
 <section class="feature flip" id="meal">
-  <img data-photo="meal" alt="お食事">
+  <figure class="photo"><img data-photo="meal" alt="鍋とご飯、味噌汁の御膳" loading="lazy"></figure>
   <div class="text">
+    <p class="label"><span class="no">弐</span><span class="en">Cuisine</span></p>
     <h2>お食事</h2>
     <p>料理長の気分と冷蔵庫の中身で、その日の献立が決まります。</p>
     <dl>
@@ -62,8 +78,9 @@
 </section>
 
 <section class="feature" id="bath">
-  <img data-photo="bath" alt="湯殿">
+  <figure class="photo"><img data-photo="bath" alt="柚子の浮かぶ檜の湯舟" loading="lazy"></figure>
   <div class="text">
+    <p class="label"><span class="no">参</span><span class="en">Bath &amp; Leisure</span></p>
     <h2>湯殿と館内</h2>
     <p>完全貸切の内湯を、順番にお使いいただけます。入浴剤はお好きな一包をどうぞ。</p>
     <dl>
@@ -75,20 +92,24 @@
 </section>
 
 <section class="plans" id="plan">
+  <p class="label"><span class="en">Stay Plans</span></p>
   <h2>宿泊プラン</h2>
   <ul>
-    <li><h3>一泊二食　こたつ満喫</h3><p>鍋と朝ご飯の付いた、当庵の定番です。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
-    <li><h3>二泊三日　湯治ごっこ</h3><p>二日目は何の予定も入れないことをお約束いただきます。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
-    <li><h3>記念日　ささやか祝い膳</h3><p>備考欄に記念日をお書きください。甘いものをご用意します。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
+    <li><p class="plan-no">其の一</p><h3>一泊二食<span>こたつ満喫</span></h3><p>鍋と朝ご飯の付いた、当館の定番です。</p><p class="price"><small>お一人さま</small>袋いっぱいのお土産</p></li>
+    <li><p class="plan-no">其の二</p><h3>二泊三日<span>湯治ごっこ</span></h3><p>二日目は何の予定も入れないことをお約束いただきます。</p><p class="price"><small>お一人さま</small>袋いっぱいのお土産</p></li>
+    <li><p class="plan-no">其の三</p><h3>記念日<span>ささやか祝い膳</span></h3><p>備考欄に記念日をお書きください。甘いものをご用意します。</p><p class="price"><small>お一人さま</small>袋いっぱいのお土産</p></li>
   </ul>
+  <p class="plans-note">チェックイン 十五時　／　チェックアウト 十一時</p>
 </section>
 
 <section class="reserve" id="reserve">
+  <p class="label"><span class="en">Reservation</span></p>
   <h2>ご予約</h2>
   <p class="lead">ご到着の日、ご出発の日の順にお選びください。二泊まで承ります。</p>
   <p id="demo" class="notice" hidden>お試し表示中です。予約は送信されず、空室状況は見本です。</p>
   <div class="booking">
     <div class="cal">
+      <p class="step"><span>一</span>日程を選ぶ</p>
       <div class="cal-head">
         <button type="button" id="prev" aria-label="前の月">‹</button>
         <h3 id="month" aria-live="polite"></h3>
@@ -96,31 +117,36 @@
       </div>
       <div class="week" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
       <div id="days" class="days"></div>
-      <p class="legend">○ 空室　／　満 満室・休館</p>
+      <p class="legend"><span><i class="lg-free">○</i>空室</span><span><i class="lg-full">満</i>満室・休館</span><span><i class="lg-pick"></i>ご滞在</span></p>
       <p id="cal-status" role="status"></p>
     </div>
     <form id="form" novalidate>
+      <p class="step"><span>二</span>お客様のこと</p>
       <p id="stay" class="stay" aria-live="polite">日程が未選択です</p>
       <label>お名前<input name="name" required maxlength="40" autocomplete="name"></label>
       <label>メールアドレス<input name="email" type="email" required maxlength="100" autocomplete="email"><small>事前にご登録のあるアドレスのみ承ります</small></label>
-      <label>人数<select name="guests"><option value="1">一名</option><option value="2" selected>二名</option></select></label>
-      <label>宿泊プラン<select name="plan"><option>一泊二食　こたつ満喫</option><option>二泊三日　湯治ごっこ</option><option>記念日　ささやか祝い膳</option></select></label>
+      <div class="row">
+        <label>人数<select name="guests"><option value="1">一名</option><option value="2" selected>二名</option></select></label>
+        <label>宿泊プラン<select name="plan"><option>一泊二食　こたつ満喫</option><option>二泊三日　湯治ごっこ</option><option>記念日　ささやか祝い膳</option></select></label>
+      </div>
       <label>備考<textarea name="note" rows="3" maxlength="500" placeholder="苦手な食材、到着予定時刻など"></textarea></label>
       <label class="trap" aria-hidden="true">この欄は空のままに<input name="website" tabindex="-1" autocomplete="off"></label>
-      <label class="check"><input type="checkbox" name="agree" required>宿泊規約を読み、お土産を持参します</label>
+      <label class="check"><input type="checkbox" name="agree" required><span>宿泊規約を読み、お土産を持参します</span></label>
       <p id="error" class="error" role="alert"></p>
       <button class="btn" id="submit">この内容で予約を申し込む</button>
     </form>
     <div id="done" class="done" hidden tabindex="-1">
+      <p class="done-mark" aria-hidden="true">承</p>
       <h3>お申し込みを承りました</h3>
       <p id="done-text"></p>
       <p>ご予約は、女将の承認をもって確定します。結果は女将より直接お知らせいたします。</p>
-      <button type="button" class="btn" id="again">別の日程を選ぶ</button>
+      <button type="button" class="btn btn-line" id="again">別の日程を選ぶ</button>
     </div>
   </div>
 </section>
 
 <section class="faq" id="faq">
+  <p class="label"><span class="en">Q &amp; A</span></p>
   <h2>よくある質問</h2>
   <details><summary>到着と出発の時刻は？</summary><p>ご到着は十五時から、ご出発は十一時までです。</p></details>
   <details><summary>お支払い方法は？</summary><p>袋いっぱいのお土産を、ご到着時に頂戴します。現金、カードはご利用いただけません。</p></details>
@@ -130,6 +156,7 @@
 </section>
 
 <section class="rules">
+  <p class="label"><span class="en">House Rules</span></p>
   <h2>宿泊規約</h2>
   <ol>
     <li>お土産は袋の口が閉まらない程度が目安です。</li>
@@ -140,7 +167,12 @@
 </section>
 </main>
 
-<footer><p>離れ宿 こたつ庵</p><small>身内向けの架空の宿です。実在の宿泊施設ではありません。</small></footer>
+<footer>
+  <svg class="mon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5"/><circle cx="20" cy="20" r="15.5"/><text x="20" y="27" text-anchor="middle">奥</text></svg>
+  <p class="foot-name">旅館奥さん</p>
+  <p class="foot-en">Ryokan Okusan</p>
+  <small>身内向けの架空の宿です。実在の宿泊施設ではありません。</small>
+</footer>
 <script src="config.js"></script>
 <script src="app.js"></script>
 </body>
