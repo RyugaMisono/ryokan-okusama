@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>離れ宿 こたつ庵｜一日一組の宿</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#top">こたつ庵</a>
+  <nav aria-label="主な項目">
+    <a href="#room">客室</a><a href="#meal">お食事</a><a href="#bath">湯殿</a><a href="#plan">宿泊プラン</a><a href="#faq">よくある質問</a>
+  </nav>
+  <a class="btn btn-small" href="#reserve">ご予約</a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <img data-photo="hero" alt="宿の外観">
+  <div class="hero-copy">
+    <h1>離れ宿<br>こたつ庵</h1>
+    <p>何もしない贅沢を、一日一組。</p>
+  </div>
+  <div class="shoji shoji-l" aria-hidden="true"></div>
+  <div class="shoji shoji-r" aria-hidden="true"></div>
+</section>
+
+<section class="intro">
+  <h2>ようこそ、お帰りなさいませ</h2>
+  <p>当庵は、一日一組さまだけをお迎えする小さな宿でございます。<br>仲居はおりません。かわりに、気を遣わなくてよい時間がございます。<br>靴を脱いで、あとはどうぞご自由に。</p>
+</section>
+
+<section class="feature" id="room">
+  <img data-photo="room" alt="客室">
+  <div class="text">
+    <h2>客室「こたつの間」</h2>
+    <p>当庵ただ一つのお部屋です。冬はこたつ、夏は扇風機。一度入ると出られないとの声を多数頂戴しております。</p>
+    <dl>
+      <div><dt>定員</dt><dd>二名さままで</dd></div>
+      <div><dt>寝具</dt><dd>お布団（敷くのはお客様）</dd></div>
+      <div><dt>備品</dt><dd>こたつ、Wi-Fi、充電器、漫画</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="feature flip" id="meal">
+  <img data-photo="meal" alt="お食事">
+  <div class="text">
+    <h2>お食事</h2>
+    <p>料理長の気分と冷蔵庫の中身で、その日の献立が決まります。</p>
+    <dl>
+      <div><dt>夕餉</dt><dd>季節の鍋。締めは雑炊かうどんをお選びいただけます</dd></div>
+      <div><dt>朝餉</dt><dd>炊きたてご飯と味噌汁。卵は割ってお召し上がりください</dd></div>
+      <div><dt>夜食</dt><dd>戸棚の即席麺（深夜のみの裏献立）</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="feature" id="bath">
+  <img data-photo="bath" alt="湯殿">
+  <div class="text">
+    <h2>湯殿と館内</h2>
+    <p>完全貸切の内湯を、順番にお使いいただけます。入浴剤はお好きな一包をどうぞ。</p>
+    <dl>
+      <div><dt>湯殿</dt><dd>十五時から翌十時まで</dd></div>
+      <div><dt>書庫</dt><dd>読みかけの巻に栞をどうぞ</dd></div>
+      <div><dt>遊戯場</dt><dd>据置型ゲーム機と花札</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="plans" id="plan">
+  <h2>宿泊プラン</h2>
+  <ul>
+    <li><h3>一泊二食　こたつ満喫</h3><p>鍋と朝ご飯の付いた、当庵の定番です。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
+    <li><h3>二泊三日　湯治ごっこ</h3><p>二日目は何の予定も入れないことをお約束いただきます。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
+    <li><h3>記念日　ささやか祝い膳</h3><p>備考欄に記念日をお書きください。甘いものをご用意します。</p><p class="price">お一人さま<strong>袋いっぱいのお土産</strong></p></li>
+  </ul>
+</section>
+
+<section class="reserve" id="reserve">
+  <h2>ご予約</h2>
+  <p class="lead">ご到着の日、ご出発の日の順にお選びください。二泊まで承ります。</p>
+  <p id="demo" class="notice" hidden>お試し表示中です。予約は送信されず、空室状況は見本です。</p>
+  <div class="booking">
+    <div class="cal">
+      <div class="cal-head">
+        <button type="button" id="prev" aria-label="前の月">‹</button>
+        <h3 id="month" aria-live="polite"></h3>
+        <button type="button" id="next" aria-label="次の月">›</button>
+      </div>
+      <div class="week" aria-hidden="true"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+      <div id="days" class="days"></div>
+      <p class="legend">○ 空室　／　満 満室・休館</p>
+      <p id="cal-status" role="status"></p>
+    </div>
+    <form id="form" novalidate>
+      <p id="stay" class="stay" aria-live="polite">日程が未選択です</p>
+      <label>お名前<input name="name" required maxlength="40" autocomplete="name"></label>
+      <label>メールアドレス<input name="email" type="email" required maxlength="100" autocomplete="email"><small>事前にご登録のあるアドレスのみ承ります</small></label>
+      <label>人数<select name="guests"><option value="1">一名</option><option value="2" selected>二名</option></select></label>
+      <label>宿泊プラン<select name="plan"><option>一泊二食　こたつ満喫</option><option>二泊三日　湯治ごっこ</option><option>記念日　ささやか祝い膳</option></select></label>
+      <label>備考<textarea name="note" rows="3" maxlength="500" placeholder="苦手な食材、到着予定時刻など"></textarea></label>
+      <label class="trap" aria-hidden="true">この欄は空のままに<input name="website" tabindex="-1" autocomplete="off"></label>
+      <label class="check"><input type="checkbox" name="agree" required>宿泊規約を読み、お土産を持参します</label>
+      <p id="error" class="error" role="alert"></p>
+      <button class="btn" id="submit">この内容で予約を申し込む</button>
+    </form>
+    <div id="done" class="done" hidden tabindex="-1">
+      <h3>お申し込みを承りました</h3>
+      <p id="done-text"></p>
+      <p>ご予約は、女将の承認をもって確定します。結果は女将より直接お知らせいたします。</p>
+      <button type="button" class="btn" id="again">別の日程を選ぶ</button>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>よくある質問</h2>
+  <details><summary>到着と出発の時刻は？</summary><p>ご到着は十五時から、ご出発は十一時までです。</p></details>
+  <details><summary>お支払い方法は？</summary><p>袋いっぱいのお土産を、ご到着時に頂戴します。現金、カードはご利用いただけません。</p></details>
+  <details><summary>予約はいつ確定しますか？</summary><p>女将が承認した時点で確定します。自動返信のメールはお送りしておりません。</p></details>
+  <details><summary>取り消しや変更をしたいときは？</summary><p>女将へ直接ご連絡ください。いただいたお土産の予定は胸にしまっておきます。</p></details>
+  <details><summary>場所はどこですか？</summary><p>ご存じの方のみお越しいただける隠れ宿のため、掲載しておりません。</p></details>
+</section>
+
+<section class="rules">
+  <h2>宿泊規約</h2>
+  <ol>
+    <li>お土産は袋の口が閉まらない程度が目安です。</li>
+    <li>こたつでの就寝は、風邪をひくためご遠慮ください。</li>
+    <li>冷蔵庫の名前が書かれた品には手を触れないでください。</li>
+    <li>食後の皿洗いは、お気持ちで承ります。</li>
+  </ol>
+</section>
+</main>
+
+<footer><p>離れ宿 こたつ庵</p><small>身内向けの架空の宿です。実在の宿泊施設ではありません。</small></footer>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
